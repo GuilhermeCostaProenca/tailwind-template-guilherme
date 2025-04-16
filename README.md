@@ -11,6 +11,7 @@ Template minimalista com **HTML + Tailwind CSS**, pronto para projetos simples, 
 - [x] PostCSS  
 - [x] Estrutura modular de arquivos  
 - [x] Scripts automatizados
+- [x] Git Flow e versionamento semântico
 
 ---
 
@@ -47,6 +48,32 @@ tailwind-template-guilherme/
 npm install       # Instala dependências
 npm run build     # Gera o CSS final minificado em ./dist
 npm run dev       # Modo de desenvolvimento com hot reload
+```
+
+---
+
+## 🔀 Git Flow (Padrão Profissional)
+
+Este template utiliza **Git Flow**, com as seguintes branches:
+
+- `main` → versão estável, releases com tag (`v0.1.0`, `v1.0.0`...)
+- `develop` → desenvolvimento contínuo
+- `feature/nome` → novas funcionalidades
+- `release/vX.X.X` → preparação de nova versão
+- `hotfix/nome` → correções emergenciais
+
+### Primeiros passos para clonar e começar:
+
+```bash
+git clone https://github.com/SEU_USUARIO/tailwind-template-guilherme.git
+cd tailwind-template-guilherme
+npm install
+
+# Configure o modelo de commit (local)
+git config commit.template .config/gitmessage.txt
+
+# Crie sua branch de funcionalidade
+git checkout -b feature/nova-pagina
 ```
 
 ---
