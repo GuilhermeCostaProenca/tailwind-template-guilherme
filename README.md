@@ -1,5 +1,8 @@
 # 💨 Tailwind Template – Guilherme.Dev
 
+[![](https://img.shields.io/badge/setup-init--project-blue?style=flat-square)](#)
+[![](https://github.com/GuilhermeCostaProenca/tailwind-template-guilherme/actions/workflows/ci.yml/badge.svg)](https://github.com/GuilhermeCostaProenca/tailwind-template-guilherme/actions)
+
 Template minimalista com **HTML + Tailwind CSS**, pronto para projetos simples, landing pages e protótipos rápidos — com organização de código e estrutura profissional.
 
 ---
@@ -51,41 +54,65 @@ tailwind-template-guilherme/
 
 ---
 
-## ⚙️ Scripts
+## 🚀 Como usar este template
+
+1. Clique em **Use this template** no GitHub
+2. Clone o repositório gerado
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o projeto limpo com:
+
+```bash
+npm run init:project
+```
+
+Esse comando irá:
+- Atualizar o nome do projeto
+- Resetar o changelog
+- Apagar arquivos desnecessários do template
+
+---
+
+## ▶️ Rodar localmente
+
+```bash
+npm run dev
+```
+
+Acesse em: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## ⚙️ Scripts disponíveis
 
 ```bash
 npm install       # Instala dependências e ativa Husky
-npm run build     # Gera o CSS final minificado em ./dist
-npm run dev       # Modo de desenvolvimento com hot reload
-npm run commit    # Abre menu interativo para padronizar commits
+dev              # Modo de desenvolvimento com hot reload
+build            # Gera o CSS final minificado em ./dist
+commit           # Abre menu interativo para padronizar commits
+init:project     # Limpa arquivos do template e inicia um novo projeto
 ```
 
 > ⚠️ Commits devem ser feitos sempre com `npm run commit`, pois o Husky bloqueia commits manuais
 
 ---
 
-## 🔀 Git Flow (Padrão Profissional)
+## 🔀 Fluxo de desenvolvimento (Git Flow)
 
-Este template utiliza **Git Flow**, com as seguintes branches:
-
-- `main` → versão estável, releases com tag (`v0.1.0`, `v1.0.0`...)
-- `develop` → desenvolvimento contínuo
+- `main` → versão estável com tags (`v0.1.0`, `v1.0.0`...)
+- `develop` → branch principal de desenvolvimento
 - `feature/nome` → novas funcionalidades
-- `release/vX.X.X` → preparação de nova versão
+- `release/vX.X.X` → preparação de nova release
 - `hotfix/nome` → correções emergenciais
 
-### Primeiros passos para clonar e começar:
+### Comece com:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/tailwind-template-guilherme.git
-cd tailwind-template-guilherme
-npm install
-
-# Configure o modelo de commit (local)
-git config commit.template .config/gitmessage.txt
-
-# Crie sua branch de funcionalidade
-git checkout -b feature/nova-pagina
+git checkout -b feature/nova-feature
 ```
 
 ---
@@ -93,13 +120,6 @@ git checkout -b feature/nova-pagina
 ## 📋 Histórico de mudanças
 
 Veja em [CHANGELOG.md](./CHANGELOG.md)
-
----
-
-## 🧠 Sobre
-
-Criado por [Guilherme Costa Proença](https://github.com/GuilhermeCostaProenca)  
-Distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
@@ -119,7 +139,7 @@ feat(scope): mensagem curta
 # chore    → tarefas internas, config, setup
 ```
 
-Para ativar o modelo de commit localmente:
+Para ativar o modelo localmente:
 
 ```bash
 git config commit.template .config/gitmessage.txt
@@ -129,10 +149,18 @@ git config commit.template .config/gitmessage.txt
 
 ## ✅ Status de boas práticas
 
-- [x] Husky instalado com prepare automático
-- [x] Hook `pre-commit` funcionando e testado
-- [x] Commitizen configurado via `cz`
-- [x] Script de commit adicionado: `npm run commit`
-- [x] Commits com padrão feitos e registrados
-- [x] Script `test` simbólico para CI ativo
-- [x] GitHub Actions implementado com CI de instalação e build
+- [x] Estrutura modular separada por tipo (CSS, JS, imagens)
+- [x] Git Flow aplicado com branches organizadas
+- [x] Husky instalado e ativo com hook de pre-commit
+- [x] Commitizen configurado para padronização
+- [x] GitHub Actions com CI de instalação e build
+- [x] Script de inicialização de projeto (`init:project`)
+
+---
+
+## 📬 Contato
+
+Feito por [Guilherme Costa Proença](https://github.com/GuilhermeCostaProenca)  
+Entre em contato via [LinkedIn](https://linkedin.com/in/guilhermecostaproenca)
+
+---
