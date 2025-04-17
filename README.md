@@ -10,8 +10,9 @@ Template minimalista com **HTML + Tailwind CSS**, pronto para projetos simples, 
 - [x] Tailwind CSS 3.x  
 - [x] PostCSS  
 - [x] Estrutura modular de arquivos  
-- [x] Scripts automatizados
-- [x] Git Flow e versionamento semântico
+- [x] Scripts automatizados  
+- [x] Git Flow e versionamento semântico  
+- [x] Commitizen com Husky configurado  
 
 ---
 
@@ -23,6 +24,8 @@ tailwind-template-guilherme/
 │   ├── tailwind.config.js
 │   ├── postcss.config.js
 │   └── gitmessage.txt
+├── .husky/
+│   └── pre-commit
 ├── src/
 │   ├── css/
 │   │   └── style.css
@@ -34,10 +37,12 @@ tailwind-template-guilherme/
 ├── docs/
 │   └── decisoes.md
 ├── .gitignore
+├── .gitattributes (opcional)
 ├── CHANGELOG.md
 ├── LICENSE
 ├── README.md
 ├── package.json
+└── package-lock.json
 ```
 
 ---
@@ -45,10 +50,13 @@ tailwind-template-guilherme/
 ## ⚙️ Scripts
 
 ```bash
-npm install       # Instala dependências
+npm install       # Instala dependências e ativa Husky
 npm run build     # Gera o CSS final minificado em ./dist
 npm run dev       # Modo de desenvolvimento com hot reload
+npm run commit    # Abre menu interativo para padronizar commits
 ```
+
+> ⚠️ Commits devem ser feitos sempre com `npm run commit`, pois o Husky bloqueia commits manuais
 
 ---
 
@@ -112,3 +120,15 @@ Para ativar o modelo de commit localmente:
 ```bash
 git config commit.template .config/gitmessage.txt
 ```
+
+---
+
+## ✅ Status de boas práticas
+
+- [x] Husky instalado com prepare automático
+- [x] Hook `pre-commit` funcionando e testado
+- [x] Commitizen configurado via `cz`
+- [x] Script de commit adicionado: `npm run commit`
+- [x] Commits com padrão feitos e registrados
+- [x] Script `test` simbólico para CI ativo
+- [ ] GitHub Actions ainda não implementado (próximo passo)
