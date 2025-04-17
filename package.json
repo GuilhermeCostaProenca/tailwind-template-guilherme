@@ -3,13 +3,22 @@
     "version": "0.1.0",
     "description": "Template HTML + Tailwind estruturado com boas práticas por Guilherme Costa Proença",
     "scripts": {
-      "dev": "npx tailwindcss -c ./.config/tailwind.config.js -i ./src/css/style.css -o ./dist/style.css --watch",
-  "build": "npx tailwindcss -c ./.config/tailwind.config.js -i ./src/css/style.css -o ./dist/style.css --minify"
-},
+        "dev": "npx tailwindcss -c ./.config/tailwind.config.js -i ./src/css/style.css -o ./dist/style.css --watch",
+        "build": "npx tailwindcss -c ./.config/tailwind.config.js -i ./src/css/style.css -o ./dist/style.css --minify",
+        "prepare": "husky install",
+        "commit": "cz"
+    },
     "devDependencies": {
-      "tailwindcss": "^3.4.1",
-      "autoprefixer": "^10.4.15",
-      "postcss": "^8.4.35"
+        "autoprefixer": "^10.4.15",
+        "commitizen": "^4.3.1",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^8.0.0",
+        "postcss": "^8.4.35",
+        "tailwindcss": "^3.4.1"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
-  }
-  
+}
