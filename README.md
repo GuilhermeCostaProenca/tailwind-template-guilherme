@@ -13,6 +13,7 @@ Template minimalista com **HTML + Tailwind CSS**, pronto para projetos simples, 
 - [x] Scripts automatizados  
 - [x] Git Flow e versionamento semântico  
 - [x] Commitizen com Husky configurado  
+- [x] GitHub Actions com CI básico configurado
 
 ---
 
@@ -26,6 +27,9 @@ tailwind-template-guilherme/
 │   └── gitmessage.txt
 ├── .husky/
 │   └── pre-commit
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── src/
 │   ├── css/
 │   │   └── style.css
@@ -131,4 +135,4 @@ git config commit.template .config/gitmessage.txt
 - [x] Script de commit adicionado: `npm run commit`
 - [x] Commits com padrão feitos e registrados
 - [x] Script `test` simbólico para CI ativo
-- [ ] GitHub Actions ainda não implementado (próximo passo)
+- [x] GitHub Actions implementado com CI de instalação e build
